@@ -1,0 +1,12 @@
+spec:
+  template:
+    spec:
+      containers:
+      - name: test-app
+        image: test-controller:1.0-SNAPSHOT
+        env:
+          - name: my.system.property
+            valueFrom:
+              configMapKeyRef:
+                name: option2
+                key: my.system.property
